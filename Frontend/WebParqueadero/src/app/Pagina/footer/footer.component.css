@@ -1,0 +1,13 @@
+.footer{
+    text-align: center;    
+    background: #000000;
+    color: #FDFAF2;   
+    padding-left: 20px
+}
+.imagenRedes{
+    width: 20px;
+    height: 20px;
+}
+.Redes{
+    text-align: left;
+}

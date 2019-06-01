@@ -1,3 +1,74 @@
-<p>
-  registro works!
-</p>
+<section class="row">      
+  <section class="col-12">
+    <br>
+    <h3>Formulario Registro</h3>
+    <br>
+  </section>
+  <section class="col-12"></section>
+
+  <section class="col-sm-2 col-md-3"></section>
+  <section class="col-sm-8 col-md-3">
+    <section class="row-1">
+      <label>Documento</label><br />            
+      <input type="text" #Documento name="Documento" class="texto" /><br />
+      <label>Tipo</label><br />
+      <select  #Tipo name="Tipo"  class="texto">
+          <option value="CC">Cedula</option>
+          <option value="TI">TI</option>
+          <option value="CE">Cedula Extranjeria</option>
+          <option value="Pasaporte">Pasaporte</option>          
+      </select>
+      <br />
+      <label>Nombres</label><br />
+      <input type="text" #Nombres name="Nombres" class="texto" /><br />
+      <label>Apellidos</label><br />
+      <input type="text" #Apellidos name="Apellidos" class="texto" /><br />
+      <label>Correo</label><br />
+      <input type="text" #Correo name="Correo" class="texto" /><br />
+      <label>Usuario</label><br />
+      <input type="text" #Usuario name="Usuario" class="texto" /><br />
+    </section>
+  </section>
+  <section class="col-sm-2 col-md-1"></section>
+  <section class="col-sm-12 col-md-3">
+    <section class="row-2">
+      <label>Teléfono</label><br />
+      <input type="text" #Telefono name="Telefono" class="texto" /><br />
+      <label>Tipo de vehículo</label><br />
+      <select  #TipoV name="TipoV"  class="texto">
+          <option value="Carro">Carro</option>
+          <option value="Moto">Moto</option>          
+      </select>
+      <br />
+      <label>Placa</label><br />
+      <input type="text" #Placa name="Placa" class="texto" /><br />
+      <label>Jornada</label><br />
+      <select  #Jornada name="Jornada"  class="texto">
+          <option value="Noche">Nocturna</option>
+          <option value="Dia">Diurna</option>          
+      </select>
+      <br />
+      <label>Perfil</label><br />
+      <input type="radio" #Perfil name="Perfil" value="Estudiante" /><span>
+        Estudiante
+      </span>
+      <input type="radio" #Perfil name="Perfil" value="Profesor" /><span>
+        Profesor
+      </span>
+      <input type="radio" #Perfil name="Perfil" value="Administrativo" /><span>
+        Administrativo
+      </span><br />
+      <label>Contraseña</label><br />
+      <input type="text" #Contrasena name="Contrasena" class="texto" /><br />
+    </section>
+  </section>
+  <section class="col-sm-12 col-md-2"></section>
+  <section class="col-12">
+    <section class="BtnCentro">
+      <br /><br />
+      <a><input type="button" (click)="guardar(Documento.value,Tipo.value,Nombres.value,Apellidos.value,Correo.value, Telefono.value,TipoV.value,Placa.value,Jornada.value,Perfil.value,Usuario.value,Contrasena.value, $event)" value="Guardar" class="boton"/></a>
+      <a href="/"><input type="button" value="Cancelar" class="boton"/></a>
+      <br /><br />
+    </section>
+  </section>
+</section>

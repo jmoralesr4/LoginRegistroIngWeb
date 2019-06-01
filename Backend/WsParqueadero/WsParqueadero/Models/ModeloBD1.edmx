@@ -46,6 +46,29 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="InsertarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Cedula" Type="int" Mode="In" />
+          <Parameter Name="Nombre" Type="varchar" Mode="In" />
+          <Parameter Name="Apellido" Type="varchar" Mode="In" />
+          <Parameter Name="email" Type="varchar" Mode="In" />
+          <Parameter Name="Telefono" Type="varchar" Mode="In" />
+          <Parameter Name="TipoVehiculo" Type="varchar" Mode="In" />
+          <Parameter Name="Placa" Type="varchar" Mode="In" />
+          <Parameter Name="Perfil" Type="varchar" Mode="In" />
+          <Parameter Name="Usuario" Type="varchar" Mode="In" />
+          <Parameter Name="Contrasena" Type="varchar" Mode="In" />
+          <Parameter Name="Estado" Type="varchar" Mode="In" />
+          <Parameter Name="TipoDocumento" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="UpdatePago" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_Pago" Type="int" Mode="In" />
+          <Parameter Name="Tarifa" Type="int" Mode="In" />
+          <Parameter Name="Cedula" Type="int" Mode="In" />
+          <Parameter Name="Fecha" Type="varchar" Mode="In" />
+          <Parameter Name="HoraIngreso" Type="varchar" Mode="In" />
+          <Parameter Name="Total" Type="varchar" Mode="In" />
+          <Parameter Name="EstadoTx" Type="varchar" Mode="In" />
+        </Function>
         <EntityContainer Name="IngWebParqueaderoModelStoreContainer">
           <EntitySet Name="Pago" EntityType="Self.Pago" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
@@ -108,6 +131,29 @@
             <End Role="Usuario" EntitySet="Usuario" />
             <End Role="Pago" EntitySet="Pago" />
           </AssociationSet>
+          <FunctionImport Name="UpdatePago">
+            <Parameter Name="id_Pago" Mode="In" Type="Int32" />
+            <Parameter Name="Tarifa" Mode="In" Type="Int32" />
+            <Parameter Name="Cedula" Mode="In" Type="Int32" />
+            <Parameter Name="Fecha" Mode="In" Type="String" />
+            <Parameter Name="HoraIngreso" Mode="In" Type="String" />
+            <Parameter Name="Total" Mode="In" Type="String" />
+            <Parameter Name="EstadoTx" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="InsertarUsuario">
+            <Parameter Name="Cedula" Mode="In" Type="Int32" />
+            <Parameter Name="Nombre" Mode="In" Type="String" />
+            <Parameter Name="Apellido" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="Telefono" Mode="In" Type="String" />
+            <Parameter Name="TipoVehiculo" Mode="In" Type="String" />
+            <Parameter Name="Placa" Mode="In" Type="String" />
+            <Parameter Name="Perfil" Mode="In" Type="String" />
+            <Parameter Name="Usuario" Mode="In" Type="String" />
+            <Parameter Name="Contrasena" Mode="In" Type="String" />
+            <Parameter Name="Estado" Mode="In" Type="String" />
+            <Parameter Name="TipoDocumento" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -146,6 +192,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="UpdatePago" FunctionName="IngWebParqueaderoModel.Store.UpdatePago" />
+          <FunctionImportMapping FunctionImportName="InsertarUsuario" FunctionName="IngWebParqueaderoModel.Store.InsertarUsuario" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

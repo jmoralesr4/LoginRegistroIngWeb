@@ -1,0 +1,83 @@
+<section class="row">      
+  
+  <!-- <section class="col-6"></section> -->
+  <section class="row-1 Pnlizq">
+  <section class="col-sm-2 col-md-12">
+      <section class="col-12">
+          <br>
+          <h3>Consultar Pago</h3>
+          <br>
+      </section>
+  </section>
+  <section class="row">
+  <section class="col-sm-2 col-md-4"></section>
+  <section class="col-sm-10 col-md-8">    
+      <section class="row col-sm-10 col-md-12">    
+          <section class="col-sm-10 col-md-5">    
+            <label class="LblTitulos">Num. Tiquete: </label>
+          </section>
+          <section class="col-sm-10 col-md-5">    
+            <label class="data">{{ ObjetoDatos.pago.id_Pago }}</label><br />      
+          </section>
+      </section>
+      <section class="row col-sm-10 col-md-12">   
+          <section class="col-sm-10 col-md-5">    
+            <label class="LblTitulos">Fecha: </label>
+          </section>
+          <section class="col-sm-10 col-md-5">  
+            <label class="data">{{ ObjetoDatos.pago.Fecha }}</label><br />
+          </section>
+      </section>
+      <section class="row col-sm-10 col-md-12">   
+          <section class="col-sm-10 col-md-5">    
+            <label class="LblTitulos">Hora Entrada: </label>
+          </section>
+          <section class="col-sm-10 col-md-5">  
+            <label class="data">{{ ObjetoDatos.pago.HoraIngreso }}</label><br />
+          </section>
+      </section>
+      <section class="row col-sm-10 col-md-12">   
+          <section class="col-sm-10 col-md-5">    
+            <label class="LblTitulos">Hora Actual: </label>
+          </section>
+          <section class="col-sm-10 col-md-5">  
+            <label class="data">{{ today | date:'hh:mm:ss a':'0700'}}</label><br />
+          </section>
+  </section>
+      <section class="row col-sm-10 col-md-12">   
+          <section class="col-sm-10 col-md-5">    
+            <label class="LblTitulos">Total a pagar: </label>
+          </section>
+          <section class="col-sm-10 col-md-5">  
+            <label class="data">{{ ObjetoDatos.pago.Total }}</label>
+          </section>
+      </section>
+      <section class="row col-sm-10 col-md-12">   
+          <section class="col-sm-10 col-md-5">    
+            <label class="LblTitulos">Estado: </label>
+          </section>
+          <section class="col-sm-10 col-md-5">  
+            <label class="data">{{ ObjetoDatos.pago.EstadoTx }}</label>
+          </section>
+      </section>
+    </section>
+    <section class="col-sm-12 col-md-12">
+        <section class="BtnCentro">
+          <br /><br />
+          <a (click)="Pagar()" ><input type="button" value="Pagar" class="boton"/></a>          
+          <br /><br />
+        </section>
+      </section>
+  </section>
+  </section> 
+  <section class="row-2">
+  <section class="col-sm-12 col-md-6">    
+      <figure class="imagen">
+          <img src="../../../assets/Img/Pago.png" alt="Pago del Parqueadero"  class="ImgPago">                    
+          <!-- <figcaption>Imagen de Parqueadero</figcaption> -->
+      </figure>         
+    </section>
+  </section>
+  <section class="col-sm-12 col-md-2"></section>
+  
+</section>

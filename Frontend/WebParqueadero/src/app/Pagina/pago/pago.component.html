@@ -1,0 +1,82 @@
+<section class="row">        
+
+    <section class="row-1 Pnlizq">
+    <section class="col-sm-2 col-md-12">
+        <section class="col-12">
+            <br>
+            <h3>Pagar</h3>
+            <br>
+        </section>
+    </section>
+    <section class="row">
+    <section class="col-sm-2 col-md-4"></section>
+    <section class="col-sm-10 col-md-8">    
+        <section class="row col-sm-10 col-md-12">   
+            <section class="col-sm-10 col-md-5">    
+              <label class="LblTitulos">Fecha: </label>
+            </section>
+            <section class="col-sm-10 col-md-5">  
+              <label class="data">{{ ObjetoDatos.pago.Fecha }}</label><br />
+            </section>
+        </section>
+        <section class="row col-sm-10 col-md-12">   
+            <section class="col-sm-10 col-md-5">    
+              <label class="LblTitulos">Hora Entrada: </label>
+            </section>
+            <section class="col-sm-10 col-md-5">  
+              <label class="data">{{ ObjetoDatos.pago.HoraIngreso }}</label><br />
+            </section>
+        </section>
+        <section class="row col-sm-10 col-md-12">   
+            <section class="col-sm-10 col-md-5">    
+              <label class="LblTitulos">Hora Actual: </label>
+            </section>
+            <section class="col-sm-10 col-md-5">  
+              <label class="data">{{ today | date:'hh:mm:ss a':'0700'}}</label><br />
+            </section>
+    </section>
+        <section class="row col-sm-10 col-md-12">   
+            <section class="col-sm-10 col-md-5">    
+              <label class="LblTitulos">Valor: </label>
+            </section>
+            <section class="col-sm-10 col-md-5">  
+              <label class="data">{{ ObjetoDatos.pago.Total }}</label>
+            </section>
+    </section>
+        <label class="LblTitulos">Correo: </label><br />
+        <input type="text" #email name="email" class="texto"/><br />        
+        <label class="LblTitulos">Entidad Bancaria: </label><br />
+        <select  #Banco name="Banco"  class="texto">
+            <option value="Bancolombia">Bancolombia</option>
+            <option value="BancoDeBogota">Banco de Bogotá</option>
+            <option value="Avvillas">Avvillas</option>
+            <option value="Popular">Banco Popular</option>
+            <option value="BBVA">BBVA</option>
+        </select>        
+      </section>
+      <section class="col-sm-12 col-md-12">
+          <section class="BtnCentro">
+            <br /><br />
+            <a><input type="button" (click)="pagar(email.value, Banco.value, $event)" value="Pagar" class="boton"/></a>                      
+            <br />
+            <div class="col-12 error" *ngIf=msnerror>
+                {{ msnerror }}
+              </div>
+            <br />
+          </section>
+        </section>
+    </section>
+    </section> 
+    <section class="row-2">
+    <section class="col-sm-12 col-md-6">    
+        <figure class="imagen">
+            <img src="../../../assets/Img/Pago.png" alt="Pago del Parqueadero"  class="ImgPago">                    
+            
+        </figure>         
+      </section>
+    </section>
+    <section class="col-sm-12 col-md-2"></section>
+    
+  </section>
+  
+   

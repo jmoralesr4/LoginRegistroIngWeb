@@ -1,31 +1,39 @@
 <br><br>
-<main class="main">
-<section class="row">		
+<section class="row main">		
 	<section class="col-sm-11 col-md-4"></section>
-	<section class="col-sm-11 col-md-4 Centrar">
-		<label>Usuario</label><br>
-		<input type="text" class="Cajatexto">
+	<section class="col-sm-11 col-md-4 Centrar form-group">
+		<label>Usuario</label><br>	
+		<input type="text" #username name="username" value="jmoralesr4">		
+		<span *ngIf="!username" class="invalid-feedback">
+            usuario es requerido
+        </span>
 	</section>
 	<section class="col-sm-11 col-md-4"></section>
 	<section class="col-sm-11 col-md-4"></section>
-	<section class="col-sm-11 col-md-4 Centrar">
+	<section class="col-sm-11 col-md-4 Centrar form-group">
 		<label>Contraseña</label><br>
-		<input type="password" class="Cajatexto">
+		<input type="password" #password name="password" placeholder="Password" value="jmoralesr4">
+		<!-- <span *ngIf="password.touched && password.error?.required" class="invalid-feedback">
+            clave es requerido
+        </span> -->
 	</section>
 	<section class="col-sm-11 col-md-4"></section>
 	<section class="col-sm-11 col-md-4"></section>
 	<section class="col-sm-11 col-md-4 Centrar">
-		<a href="Registro.html">Resgistro|</a>
-		<a href="RecordarContrasena.html">Recordar Contraseña |</a>
-		<a href="Ayuda.html">Ayuda</a>
+		<a href="/Registro">Resgistro|</a>
+		<a href="/RecordarContrasena">Recordar Contraseña |</a>
+		<a href="/Ayuda">Ayuda</a>
 	</section>	
 	<section class="col-sm-11 col-md-4"></section>
 	<section class="col-sm-11 col-md-4"></section>
 	
-	<section class="col-sm-11 col-md-4 Centrar">
-		<a href="ConsultarPago.html"><input type="button" value="Aceptar" class="boton"></a>
+	<section class="col-sm-11 col-md-4 Centrar form-group">
+		<br>	
+		<a><input type="submit"  class="boton" (click)="logIn(username.value, password.value, $event)"  value="Aceptar"></a>
+		<div class="col-12 error" *ngIf=resultado>
+			{{resultado}}
+		</div>
 	</section>
 	<section class="col-sm-11 col-md-4"></section>
 </section>
-</main>       
 <br><br>

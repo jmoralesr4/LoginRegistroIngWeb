@@ -37,3 +37,7 @@ img{
 .salir{
 	text-align: right
 }
+.barra{
+	background: #000000;
+	height: 10px
+}

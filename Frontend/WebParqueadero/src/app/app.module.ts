@@ -9,6 +9,10 @@ import { FooterComponent } from './Pagina/footer/footer.component';
 import { LoginComponent } from './Pagina/login/login.component';
 import { RegistroComponent } from './Pagina/registro/registro.component';
 import { ConsultaUsuarioComponent } from './Pagina/consulta-usuario/consulta-usuario.component';
+import { ConsultarPagoComponent } from './Pagina/consultar-pago/consultar-pago.component';
+import { PagoComponent } from './Pagina/pago/pago.component';
+import { AyudaComponent } from './Pagina/ayuda/ayuda.component';
+import { RecordarContrasenaComponent } from './Pagina/recordar-contrasena/recordar-contrasena.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { ConsultaUsuarioComponent } from './Pagina/consulta-usuario/consulta-usu
     FooterComponent,
     LoginComponent,
     RegistroComponent,
-    ConsultaUsuarioComponent
+    ConsultaUsuarioComponent,
+    ConsultarPagoComponent,
+    PagoComponent,
+    AyudaComponent,
+    RecordarContrasenaComponent
   ],
   imports: [
     BrowserModule,

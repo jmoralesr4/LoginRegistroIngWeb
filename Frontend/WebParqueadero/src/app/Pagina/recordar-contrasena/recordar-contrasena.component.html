@@ -1,0 +1,23 @@
+<section class="main row">
+  <section class="col-12">
+    <br>
+    <h3>Recordar Contraseña</h3>
+  </section>
+  <section class="col-1"></section>
+  <section class="col-11">
+    Correo Electrónico<br>
+    <input type="text" #correo name="correo" class="texto">
+    <ul>
+        <li>Se enviará un correo con la contraseña.</li>
+        {{ respuesta }}
+    </ul>
+    <br><br>
+    <br><br>
+  </section>
+  <section class="col-12">
+     <section class="BtnCentro">
+         <a><input type="button" (click)="enviar(correo.value)" value="Enviar" class="boton"></a>
+     </section>
+     <br>
+    </section>
+ </section> 
